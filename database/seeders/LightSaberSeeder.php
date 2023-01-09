@@ -17,6 +17,7 @@ class LightSaberSeeder extends Seeder
     {
         $spade=config('lightsaberdata.sabers');
         foreach ($spade as $spada) {
+
             $lightsaber = new LightSaber();
             $lightsaber->name = $spada["name"];
             $lightsaber->image = $spada["img"];

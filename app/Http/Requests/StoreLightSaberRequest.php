@@ -24,7 +24,10 @@ class StoreLightSaberRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|unique:light_sabers,name|min:5|max:100',
+            'image' => 'nullable|max:255',
+            'description' => 'nullable|max:255',
+            'price' => 'nullable|max:6',
         ];
     }
 }
